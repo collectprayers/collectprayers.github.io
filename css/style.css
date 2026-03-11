@@ -7,11 +7,11 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
-    cursor: url('/fun/MagicStick.ani'), auto;
+    cursor: url('/fun/MagicStick.cur'), auto;
   }
 
   a {
-    cursor: url('/fun/pasteldarkblue.cur'), pointer;
+    cursor: url('/fun/pixelcursor.cur'), pointer;
 }
   
 header {
