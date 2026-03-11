@@ -27,10 +27,9 @@
       margin-top: 30px;
       padding: 15px;
       background: #000;
-      min-height: 200px; /* Platzhalter, damit man sieht wo es lädt */
+      min-height: 300px; /* Erhöht, damit man das Laden besser sieht */
     }
 
-    /* Navigation Layout */
     .nav-links {
       display: flex;
       align-items: center;
@@ -43,7 +42,6 @@
       margin-left: 20px;
     }
 
-    /* Social Media Container */
     .social-row {
       display: flex;
       gap: 15px;
@@ -67,7 +65,6 @@
       text-decoration: none;
     }
 
-    /* Mobile Anpassung */
     @media (max-width: 768px) {
       .nav-links {
         flex-direction: column !important;
@@ -139,7 +136,15 @@
     </div>
   </main>
 
-  <script defer src="https://cusdis.com/js/cusdis.bundle.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const script = document.createElement('script');
+      script.src = "https://cusdis.com/js/cusdis.bundle.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    });
+  </script>
   <script src="js/script.js"></script>
 
 </body>
