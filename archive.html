@@ -13,11 +13,52 @@
     <style>
         body {
             background-color: black;
+            color: white;
+        }
+
+        /* Konsistente Social-Row für die Icons */
+        .social-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .soundcloud-logo, .twitter-logo {
+            height: 24px;
+            width: auto;
+            display: block;
         }
 
         @media (min-width: 768px) {
             #gallery {
                 margin-top: 120px;
+            }
+        }
+
+        /* Mobile Fixes für das Menü */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column !important;
+                padding-top: 60px !important;
+            }
+            
+            .nav-links li {
+                margin: 10px 0 !important;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-left: 0 !important;
+            }
+
+            /* Der 15px extra Abstand nach dem Guestbook-Link (4. Element) */
+            .nav-links li:nth-child(4) {
+                margin-bottom: 25px !important;
+            }
+
+            /* Logos mobil nebeneinander halten */
+            .social-row {
+                flex-direction: row !important;
             }
         }
     </style>
@@ -35,10 +76,17 @@
           <li><a href="index.html">About</a></li>
           <li><a href="paintings.html">Gallery</a></li>
           <li><a href="#"><span class="underlined">Archive</span></a></li>
-          <li><a href="https://soundcloud.com/u_ume" target="_blank">
-            <img src="img/sclogo.svg" alt="SoundCloud Logo" class="soundcloud-logo"></a></li>
-          <li><a href="https://twitter.com/paintingsbylol" target="_blank">
-            <img src="img/twitterlogo.svg" alt="Twitter Logo" class="twitter-logo"></a></li>
+          <li><a href="guestbook.html">Guestbook</a></li>
+          <li>
+            <div class="social-row">
+              <a href="https://soundcloud.com/u_ume" target="_blank">
+                <img src="img/sclogo.svg" alt="SoundCloud Logo" class="soundcloud-logo">
+              </a>
+              <a href="https://twitter.com/paintingsbylol" target="_blank">
+                <img src="img/twitterlogo.svg" alt="Twitter Logo" class="twitter-logo">
+              </a>
+            </div>
+          </li>
         </ul>
       </div>
       <button class="nav-toggle">
@@ -61,8 +109,7 @@
   </div>
 </div>
 
-        <script src="js/lightbox.js"></script>
-
+<script src="js/lightbox.js"></script>
 
 </body>
 </html>
