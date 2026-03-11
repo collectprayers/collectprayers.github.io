@@ -7,11 +7,11 @@ body {
     padding: 0;
     background-image: linear-gradient(#000000, #6270eb);
     background-attachment: fixed;
-    cursor: url('/fun/MagicStick.ani'), auto;
+    cursor: url('/fun/MagicStick.cur'), auto;
   }
 
   a {
-    cursor: url('/fun/pasteldarkblue.cur'), pointer;
+    cursor: url('/fun/pixelcursor.cur'), pointer;
 }
 
 main {
