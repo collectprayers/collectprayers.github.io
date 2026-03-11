@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,9 +25,9 @@
     
     #cusdis_thread {
       margin-top: 30px;
-      border: 1px solid #fff;
       padding: 15px;
       background: #000;
+      min-height: 200px; /* Platzhalter, damit man sieht wo es lädt */
     }
 
     /* Navigation Layout */
@@ -59,6 +59,7 @@
 
     .underlined {
       text-decoration: underline;
+      text-underline-offset: 8px;
     }
 
     a {
@@ -81,9 +82,8 @@
         justify-content: center;
       }
 
-      /* NEU: 15px extra Abstand unter dem Guestbook-Link (4. Listen-Element) */
       .nav-links li:nth-child(4) {
-        margin-bottom: 25px !important; /* 10px Standard + 15px extra */
+        margin-bottom: 25px !important;
       }
 
       .social-row {
@@ -107,7 +107,6 @@
           <li><a href="paintings.html">Gallery</a></li>
           <li><a href="archive.html">Archive</a></li>
           <li><a href="guestbook.html"><span class="underlined">Guestbook</span></a></li>
-          
           <li>
             <div class="social-row">
               <a href="https://soundcloud.com/u_ume" target="_blank">
@@ -131,18 +130,17 @@
     <h1>°˖✧ Guestbook ✧˖°</h1>
     <p>Leave a message in the digital void...</p>
 
-<div id="cusdis_thread" 
-     data-host="https://cusdis.com"
-     data-app-id="3e50dcfc-92a3-4d09-9a60-0b98a2cd2c1e" 
-     data-page-id="guestbook" 
-     data-theme="dark">
-</div>
+    <div id="cusdis_thread" 
+         data-host="https://cusdis.com"
+         data-app-id="3e50dcfc-92a3-4d09-9a60-0b98a2cd2c1e" 
+         data-page-id="guestbook" 
+         data-page-title="Guestbook"
+         data-theme="dark">
+    </div>
   </main>
 
-  <script async defer src="https://cusdis.com/js/cusdis.bundle.js"></script>
+  <script defer src="https://cusdis.com/js/cusdis.bundle.js"></script>
   <script src="js/script.js"></script>
 
 </body>
-
 </html>
-
