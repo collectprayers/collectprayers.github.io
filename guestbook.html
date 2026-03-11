@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Guestbook</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: rgb(0, 0, 0);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .guestbook-section {
+      padding-top: 100px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+      font-family: monospace;
+    }
+    
+    #cusdis_thread {
+      margin-top: 30px;
+      border: 1px solid #fff;
+      padding: 15px;
+      background: #000;
+    }
+
+    /* Navigation Layout */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    /* Social Media Container */
+    .social-row {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .soundcloud-logo, .twitter-logo {
+      height: 24px;
+      width: auto;
+      display: block;
+    }
+
+    .underlined {
+      text-decoration: underline;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Mobile Anpassung */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column !important;
+        padding-top: 60px !important;
+      }
+      
+      .nav-links li {
+        margin: 10px 0 !important;
+        margin-left: 0 !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* NEU: 15px extra Abstand unter dem Guestbook-Link (4. Listen-Element) */
+      .nav-links li:nth-child(4) {
+        margin-bottom: 25px !important; /* 10px Standard + 15px extra */
+      }
+
+      .social-row {
+        flex-direction: row !important; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay"></div>
+
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <h1 class="site-title">°˖✧♡／(^ × ^)＼ ✧˖° ♱</h1>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">About</a></li>
+          <li><a href="paintings.html">Gallery</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="guestbook.html"><span class="underlined">Guestbook</span></a></li>
+          
+          <li>
+            <div class="social-row">
+              <a href="https://soundcloud.com/u_ume" target="_blank">
+                <img src="img/sclogo.svg" alt="SoundCloud Logo" class="soundcloud-logo">
+              </a>
+              <a href="https://twitter.com/paintingsbylol" target="_blank">
+                <img src="img/twitterlogo.svg" alt="Twitter Logo" class="twitter-logo">
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="nav-toggle">
+        <div class="toggle-bar"></div>
+        <div class="toggle-bar"></div>
+      </button>
+    </nav>
+  </header>
+
+  <main class="guestbook-section">
+    <h1>°˖✧ Guestbook ✧˖°</h1>
+    <p>Leave a message in the digital void...</p>
+
+    <div id="cusdis_thread" 
+         data-host="https://cusdis.com"
+         data-app-id="3e50dcfc-92a3-4d09-9a60-0b98a2cd2c1e" 
+         data-page-id="guestbook" 
+         data-page-url="https://collectprayers.github.io/guestbook.html"
+         data-page-title="Guestbook">
+    </div>
+  </main>
+
+  <script async defer src="https://cusdis.com/js/cusdis.bundle.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
